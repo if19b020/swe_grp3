@@ -1,1 +1,3 @@
-create proper .gitignore file
+[] create proper .gitignore file
+[] DB connection (?)
+
