@@ -2,6 +2,8 @@ package com.example.tourplanner;
 
 import java.util.Date;
 
+
+// maybe put in package "contracts" so class can be shared between different layers
 public class TourLog {
     private Date date;
     private int duration;
