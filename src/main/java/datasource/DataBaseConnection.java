@@ -3,7 +3,7 @@ package datasource;
 // https://devtut.github.io/postgresql/connect-to-postgresql-from-java.html#connecting-with-java-sql-drivermanager-and-properties
 
 public class DataBaseConnection {
-    private static java.sql.Connection connect(String url, String user, String password)
+    static java.sql.Connection connect(String url, String user, String password)
             throws ClassNotFoundException, java.sql.SQLException {
         Class.forName("org.postgresql.Driver");
         java.util.Properties props = new java.util.Properties();
