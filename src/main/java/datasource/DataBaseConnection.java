@@ -2,6 +2,11 @@ package datasource;
 
 // https://devtut.github.io/postgresql/connect-to-postgresql-from-java.html#connecting-with-java-sql-drivermanager-and-properties
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Arrays;
+
 public class DataBaseConnection {
     static java.sql.Connection connect(String url, String user, String password)
             throws ClassNotFoundException, java.sql.SQLException {
@@ -15,6 +20,14 @@ public class DataBaseConnection {
          * Tell the driver manager to connect to the database specified with the URL.
          * This may throw an SQLException.
          */
+
+        try (Connection conn = DriverManager.getConnection(url, props)) {
+            System.out.println(conn.getMetaData().getDatabaseProductVersion());
+        } catch(SQLException e) {
+            System.out.println("Error connecting to database " + Arrays.toString(e.getStackTrace()));
+        }
+
+
         return java.sql.DriverManager.getConnection(url, props);
     }
 }

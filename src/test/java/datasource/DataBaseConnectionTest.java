@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class DataBaseConnectionTest {
     private String user = "postgres";
     private String url = "jdbc:postgresql://localhost:5432/postgres";
