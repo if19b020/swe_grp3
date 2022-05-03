@@ -78,6 +78,12 @@
 
 
   <fx:include fx:id="tourLogsView" source="tourLogView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="6" GridPane.valignment="TOP" />
+   <Accordion>
+     <panes>
+       <TitledPane animated="false" text="untitled 1" />
+       <TitledPane animated="false" text="untitled 2" />
+     </panes>
+   </Accordion>
 
 
 
