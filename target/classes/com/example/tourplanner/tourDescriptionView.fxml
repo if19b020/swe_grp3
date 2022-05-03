@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TourController.tourDescriptionView">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints vgrow="ALWAYS" />
+    </rowConstraints>
+
+    <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.valignment="TOP">
+        <Label text="Name: " />
+        <Label fx:id="selectedTourNameField" />
+    </HBox>
+    <TabPane tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="TOP">
+        <Tab text="Route">
+            <Pane fx:id="container" prefWidth="100" prefHeight="100">
+                <ImageView fx:id="selectedTourRouteInfoField" cache="true" cacheHint="SPEED" depthTest="ENABLE" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true"
+                           fitWidth="${container.width}" fitHeight="${container.height}"
+                           smooth="false" managed="false"/>
+            </Pane>
+        </Tab>
+        <Tab text="Description">
+            <TextArea fx:id="selectedTourDescField" editable="false" />
+        </Tab>
+        <GridPane.margin>
+            <Insets />
+        </GridPane.margin>
+    </TabPane>
+    <GridPane.margin>
+        <Insets right="10.0" />
+    </GridPane.margin>
+</GridPane>
+
