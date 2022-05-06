@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" prefHeight="800" prefWidth="1000" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.mainViewController">
+<GridPane alignment="center" hgap="10" prefHeight="800" prefWidth="1000" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.mainViewController">
 
   <columnConstraints>
     <ColumnConstraints />
@@ -34,7 +34,6 @@
   </rowConstraints>
 
   <!--region column0-->
-  <Text text="Tour-Planner" GridPane.columnIndex="0" GridPane.columnSpan="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
 
   <MenuBar GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.rowIndex="1">
     <Menu mnemonicParsing="false" text="File">
@@ -78,13 +77,6 @@
 
 
   <fx:include fx:id="tourLogsView" source="tourLogView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="6" GridPane.valignment="TOP" />
-   <Accordion>
-     <panes>
-       <TitledPane animated="false" text="untitled 1" />
-       <TitledPane animated="false" text="untitled 2" />
-     </panes>
-   </Accordion>
-
 
 
 </GridPane>
