@@ -6,6 +6,7 @@ module com.example.tourplanner {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
+    requires org.postgresql.jdbc;
 
     opens com.example.tourplanner to javafx.fxml;
     exports com.example.tourplanner;

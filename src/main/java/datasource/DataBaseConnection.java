@@ -8,6 +8,12 @@ import java.sql.SQLException;
 import java.util.Arrays;
 
 public class DataBaseConnection implements IDataBaseConnection {
+    private final String connectionString;
+
+    public DataBaseConnection(String connectionString) {
+        this.connectionString = connectionString;
+    }
+
     static java.sql.Connection connect(String url, String user, String password)
             throws ClassNotFoundException, java.sql.SQLException {
         Class.forName("org.postgresql.Driver");
