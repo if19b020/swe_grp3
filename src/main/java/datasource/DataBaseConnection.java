@@ -14,10 +14,11 @@ public class DataBaseConnection implements IDataBaseConnection {
         this.connectionString = connectionString;
     }
 
-    static java.sql.Connection connect(String url, String user, String password)
+    private java.sql.Connection connect(String url, String user, String password)
             throws ClassNotFoundException, java.sql.SQLException {
         Class.forName("org.postgresql.Driver");
         java.util.Properties props = new java.util.Properties();
+        // TODO save username + password in config file
         props.setProperty("user", user);
         props.setProperty("password", password);
         /* don't use server prepared statements */
@@ -27,13 +28,18 @@ public class DataBaseConnection implements IDataBaseConnection {
          * This may throw an SQLException.
          */
 
-        try (Connection conn = DriverManager.getConnection(url, props)) {
+        /*try (Connection conn = DriverManager.getConnection(url, props)) {
             System.out.println(conn.getMetaData().getDatabaseProductVersion());
         } catch(SQLException e) {
             System.out.println("Error connecting to database " + Arrays.toString(e.getStackTrace()));
+        }*/
+
+        try {
+            return DriverManager.getConnection(connectionString, user, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        throw new SQLException("Establishing database connection failed.");
 
-
-        return java.sql.DriverManager.getConnection(url, props);
     }
 }
