@@ -5,6 +5,7 @@ package datasource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DataBaseConnection implements IDataBaseConnection {
@@ -41,5 +42,16 @@ public class DataBaseConnection implements IDataBaseConnection {
         }
         throw new SQLException("Establishing database connection failed.");
 
+    }
+
+    @Override
+    public int insertTour(String sqlQuery, ArrayList<Object> parameters) throws SQLException {
+        // TODO implement
+        return 0;
+    }
+
+    @Override
+    public <T> void deleteTour(String sqlQuery, Integer id) throws SQLException {
+        // TODO implement
     }
 }
