@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 
 public class MainViewController implements Initializable {
 
-    public GridPane toursOverviewView;
+    public GridPane tourView;
     public GridPane tourDescriptionView;
     public GridPane tourLogView;
 
