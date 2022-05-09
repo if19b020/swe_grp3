@@ -26,7 +26,7 @@ public class DataBaseConnection implements IDataBaseConnection {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        throw new SQLException("Establishing database connection failed.");
+        throw new SQLException("Database connection failed.");
 
     }
 
