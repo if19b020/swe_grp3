@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -18,11 +19,26 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Tour Name" />
-            <Label text="From" GridPane.rowIndex="1" />
-            <Label text="To" GridPane.rowIndex="2" />
-            <Label text="Description" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="Confirm" GridPane.rowIndex="4" />
+            <Label text="Tour Name">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Label text="From" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Label text="To" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Label text="Description" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Button mnemonicParsing="false" text="Confirm" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Button>
             <TextField GridPane.columnIndex="1" />
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
