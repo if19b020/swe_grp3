@@ -18,7 +18,7 @@ public class mainViewController extends Application {
     public void generateReport(ActionEvent actionEvent) {
     }
 
-    public void generateMulitReport(ActionEvent actionEvent) {
+    public void generateMultiReport(ActionEvent actionEvent) {
     }
 
     public void exportData(ActionEvent actionEvent) {
