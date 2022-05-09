@@ -70,7 +70,7 @@
     </TextField>
   </HBox>
 
-  <fx:include fx:id="toursOverviewView" source="tourView.fxml" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="10" GridPane.valignment="TOP" />
+  <fx:include fx:id="tourView" source="tourView.fxml" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="10" GridPane.valignment="TOP" />
 
 
   <fx:include fx:id="tourDescriptionView" source="tourDescriptionView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2" GridPane.rowSpan="5" GridPane.valignment="TOP" />
