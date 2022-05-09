@@ -1,4 +1,4 @@
-package views;
+package views.controller;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;

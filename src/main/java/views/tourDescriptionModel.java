@@ -3,7 +3,7 @@ package views;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class tourDescriptionView extends Application {
+public class tourDescriptionModel extends Application {
 
     public static void main(String[] args) {
         launch(args);
