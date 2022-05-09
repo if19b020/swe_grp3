@@ -5,8 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import views.MainViewModel;
 import views.TourViewModel;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -31,8 +33,10 @@ public class TourViewController implements Initializable {
     }
 
 
-    public void addNewTour(ActionEvent actionEvent) {
+    public void addNewTour(ActionEvent actionEvent) throws IOException {
         tourViewModel.addTour();
+        MainViewModel mvm = new MainViewModel();
+        mvm.addNewTour();
     }
 
     public void removeTour(ActionEvent actionEvent) {
