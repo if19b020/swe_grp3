@@ -2,16 +2,16 @@ package views.controller;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 
-public class TourLogViewController extends Application {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+public class TourLogViewController implements Initializable {
 
     @Override
-    public void start(Stage primaryStage) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
 
@@ -26,4 +26,6 @@ public class TourLogViewController extends Application {
 
     public void editLog(ActionEvent actionEvent) {
     }
+
+
 }

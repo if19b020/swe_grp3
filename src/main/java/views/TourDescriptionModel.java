@@ -1,16 +1,18 @@
 package views;
 
 import javafx.application.Application;
+import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 
-public class TourDescriptionModel extends Application {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+import static javafx.application.Application.launch;
+
+public class TourDescriptionModel implements Initializable {
 
     @Override
-    public void start(Stage primaryStage) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
 }
