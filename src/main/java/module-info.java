@@ -7,6 +7,7 @@ module com.example.tourplanner {
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
     requires org.postgresql.jdbc;
+    requires lombok;
 
     opens com.example.tourplanner to javafx.fxml;
     exports com.example.tourplanner;
