@@ -13,4 +13,5 @@ module com.example.tourplanner {
     exports com.example.tourplanner;
     exports ViewController;
     exports TourController;
+    exports views;
 }
