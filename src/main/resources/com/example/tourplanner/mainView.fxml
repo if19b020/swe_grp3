@@ -76,7 +76,7 @@
   <fx:include fx:id="tourDescriptionView" source="tourDescriptionView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2" GridPane.rowSpan="5" GridPane.valignment="TOP" />
 
 
-  <fx:include fx:id="tourLogsView" source="tourLogView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="6" GridPane.valignment="TOP" />
+  <fx:include fx:id="tourLogView" source="tourLogView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="6" GridPane.valignment="TOP" />
 
 
 </GridPane>

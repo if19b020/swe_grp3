@@ -11,8 +11,8 @@ module com.example.tourplanner {
 
     opens com.example.tourplanner to javafx.fxml;
     exports com.example.tourplanner;
-    exports ViewController;
-    exports TourController;
+    //exports ViewController;
+    //exports TourController;
     exports views;
     exports views.controller;
 }

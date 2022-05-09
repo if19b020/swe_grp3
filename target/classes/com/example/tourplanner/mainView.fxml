@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" prefHeight="800" prefWidth="1000" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.mainViewController">
+<GridPane alignment="center" hgap="10" prefHeight="800" prefWidth="1000" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controller.MainViewController">
 
   <columnConstraints>
     <ColumnConstraints />
@@ -34,12 +34,11 @@
   </rowConstraints>
 
   <!--region column0-->
-  <Text text="Tour-Planner" GridPane.columnIndex="0" GridPane.columnSpan="6" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER" />
 
   <MenuBar GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.rowIndex="1">
     <Menu mnemonicParsing="false" text="File">
       <MenuItem mnemonicParsing="false" onAction="#generateReport" text="Save Selected as PDF" />
-      <MenuItem mnemonicParsing="false" onAction="#generateMulitReport" text="Save All as PDF" />
+      <MenuItem mnemonicParsing="false" onAction="#generateMultiReport" text="Save All as PDF" />
     </Menu>
     <Menu mnemonicParsing="false" text="Edit">
       <MenuItem mnemonicParsing="false" text="UNDO" />
@@ -71,14 +70,13 @@
     </TextField>
   </HBox>
 
-  <fx:include fx:id="toursOverviewView" source="toursView.fxml" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="10" GridPane.valignment="TOP" />
+  <fx:include fx:id="toursOverviewView" source="tourView.fxml" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="10" GridPane.valignment="TOP" />
 
 
   <fx:include fx:id="tourDescriptionView" source="tourDescriptionView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2" GridPane.rowSpan="5" GridPane.valignment="TOP" />
 
 
-  <fx:include fx:id="tourLogsView" source="tourLogView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="6" GridPane.valignment="TOP" />
-
+  <fx:include fx:id="tourLogView" source="tourLogView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="6" GridPane.valignment="TOP" />
 
 
 </GridPane>
