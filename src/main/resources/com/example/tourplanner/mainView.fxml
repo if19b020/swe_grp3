@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" prefHeight="800" prefWidth="1000" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controller.mainViewController">
+<GridPane alignment="center" hgap="10" prefHeight="800" prefWidth="1000" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.controller.MainViewController">
 
   <columnConstraints>
     <ColumnConstraints />
@@ -70,7 +70,7 @@
     </TextField>
   </HBox>
 
-  <fx:include fx:id="toursOverviewView" source="toursView.fxml" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="10" GridPane.valignment="TOP" />
+  <fx:include fx:id="toursOverviewView" source="tourView.fxml" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="10" GridPane.valignment="TOP" />
 
 
   <fx:include fx:id="tourDescriptionView" source="tourDescriptionView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2" GridPane.rowSpan="5" GridPane.valignment="TOP" />

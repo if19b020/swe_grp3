@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 
-public class tourLogViewController extends Application {
+public class TourLogViewController extends Application {
 
     public static void main(String[] args) {
         launch(args);

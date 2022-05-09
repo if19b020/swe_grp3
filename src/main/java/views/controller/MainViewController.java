@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.stage.Stage;
 
-public class toursViewController extends Application {
+public class MainViewController extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -15,12 +15,15 @@ public class toursViewController extends Application {
 
     }
 
-    public void addNewTour(ActionEvent actionEvent) {
+    public void generateReport(ActionEvent actionEvent) {
     }
 
-    public void removeTour(ActionEvent actionEvent) {
+    public void generateMultiReport(ActionEvent actionEvent) {
     }
 
-    public void editTour(ActionEvent actionEvent) {
+    public void exportData(ActionEvent actionEvent) {
+    }
+
+    public void importData(ActionEvent actionEvent) {
     }
 }
