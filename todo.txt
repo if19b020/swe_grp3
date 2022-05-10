@@ -1,3 +1,5 @@
 [] create proper .gitignore file
 [] DB connection (?)
 [] create packages for layers
+
+[] add controller factory
