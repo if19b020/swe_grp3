@@ -5,11 +5,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import views.MainViewModel;
 import views.TourViewModel;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
@@ -21,7 +23,7 @@ public class TourViewController implements Initializable {
     public TextField from = new TextField();
     public TextField to = new TextField();
     public TextField description = new TextField();
-    public Button confirmButton;
+    public Button confirmButton = new Button();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -30,6 +32,8 @@ public class TourViewController implements Initializable {
         Bindings.bindBidirectional(to.textProperty(), tourViewModel.getTo());
         Bindings.bindBidirectional(description.textProperty(), tourViewModel.getDescription());
         // TODO confirmButton
+        //confirmButton.disableProperty().bind(tourName.textProperty().isEmpty().or(from.textProperty().isEmpty().or(to.textProperty().isEmpty())));
+
     }
 
 
@@ -37,6 +41,8 @@ public class TourViewController implements Initializable {
         tourViewModel.addTour();
         MainViewModel mvm = new MainViewModel();
         mvm.addNewTour();
+        //Stage stage = (Stage) confirmButton.getScene().getWindow();
+        //stage.close();
     }
 
     public void removeTour(ActionEvent actionEvent) {
