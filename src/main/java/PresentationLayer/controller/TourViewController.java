@@ -1,4 +1,4 @@
-package views.controller;
+package PresentationLayer.controller;
 
 import com.example.tourplanner.Tour;
 import javafx.beans.binding.Bindings;
@@ -7,12 +7,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import views.MainViewModel;
-import views.TourViewModel;
+import PresentationLayer.MainViewModel;
+import PresentationLayer.TourViewModel;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 

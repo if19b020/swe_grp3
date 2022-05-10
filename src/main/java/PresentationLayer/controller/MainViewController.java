@@ -1,10 +1,8 @@
-package views.controller;
+package PresentationLayer.controller;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;

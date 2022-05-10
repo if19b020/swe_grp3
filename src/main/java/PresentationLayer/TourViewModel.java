@@ -1,10 +1,8 @@
-package views;
+package PresentationLayer;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.stage.Stage;
 import lombok.Getter;
-import views.controller.TourViewController;
 
 public class TourViewModel {
 

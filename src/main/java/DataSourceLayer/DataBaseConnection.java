@@ -1,12 +1,10 @@
-package datasource;
+package DataSourceLayer;
 
 // https://devtut.github.io/postgresql/connect-to-postgresql-from-java.html#connecting-with-java-sql-drivermanager-and-properties
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class DataBaseConnection implements IDataBaseConnection {
     private final String connectionString;

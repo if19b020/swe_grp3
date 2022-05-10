@@ -1,4 +1,4 @@
-package views;
+package PresentationLayer;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.Objects;
 
 public class MainViewModel {
     public void addNewTour() throws IOException {
