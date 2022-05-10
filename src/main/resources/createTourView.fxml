@@ -35,7 +35,7 @@
                <padding>
                   <Insets left="10.0" />
                </padding></Label>
-            <Button fx:id="confirmButton" mnemonicParsing="false" text="Confirm" GridPane.rowIndex="4">
+            <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#confirmTour" text="Confirm" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin></Button>

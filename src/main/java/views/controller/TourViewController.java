@@ -41,8 +41,7 @@ public class TourViewController implements Initializable {
         tourViewModel.addTour();
         MainViewModel mvm = new MainViewModel();
         mvm.addNewTour();
-        //Stage stage = (Stage) confirmButton.getScene().getWindow();
-        //stage.close();
+
     }
 
     public void removeTour(ActionEvent actionEvent) {
@@ -51,4 +50,8 @@ public class TourViewController implements Initializable {
     public void editTour(ActionEvent actionEvent) {
     }
 
+    public void confirmTour(ActionEvent actionEvent) {
+        Stage stage = (Stage) confirmButton.getScene().getWindow();
+        stage.close();
+    }
 }
