@@ -39,7 +39,7 @@
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin></Button>
-            <TextField GridPane.columnIndex="1">
+            <TextField fx:id="tourName" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin></TextField>

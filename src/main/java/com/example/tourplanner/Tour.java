@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
-@AllArgsConstructor
+
 @Getter
 @Setter
 public class Tour {
@@ -19,6 +19,15 @@ public class Tour {
     private String routeInformation;
 
     private List<TourLog> tourLogs;
+
+    public Tour(String name, String from, String to, String description) {
+        this.name = name;
+        this.from = from;
+        this.to = to;
+        this.description = description;
+    }
+
+    
 
 
 }

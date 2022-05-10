@@ -1,5 +1,6 @@
 package views.controller;
 
+import com.example.tourplanner.Tour;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -54,5 +55,13 @@ public class TourViewController implements Initializable {
         Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();
         // TODO add tour to DB
+        System.out.println(tourViewModel.getTourName().getValue());
+        String name = tourViewModel.getTourName().getValue();
+        String from = tourViewModel.getFrom().getValue();
+        String to = tourViewModel.getTo().getValue();
+        String description = tourViewModel.getDescription().getValue();
+        Tour tour = new Tour(name, from, to, description);
+
+
     }
 }
