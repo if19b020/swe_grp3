@@ -53,5 +53,6 @@ public class TourViewController implements Initializable {
     public void confirmTour(ActionEvent actionEvent) {
         Stage stage = (Stage) confirmButton.getScene().getWindow();
         stage.close();
+        // TODO add tour to DB
     }
 }
