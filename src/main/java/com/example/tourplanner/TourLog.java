@@ -11,11 +11,17 @@ import java.util.Date;
 @Setter
 // maybe put in package "contracts" so class can be shared between different layers
 public class TourLog {
-    private Date date;
-    private int duration;
-    private String comment;
-    private int difficulty; // 1 = easy, 5 = difficult
-    private int time;
-    private int rating;
+    public TourLog(String date, String report, String distance, String time, String rating, String weather, String speed, String altitude, String difficulty, String calories) {
+        this(null, date, report, distance, time, rating, weather, speed);
+    }
+
+    public Integer Id;
+    public String Date;
+    public String Report;
+    public String Distance;
+    public String Time;
+    public String Rating;
+    public String Weather;
+    public String Speed;
 
 }
