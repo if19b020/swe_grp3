@@ -5,37 +5,46 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.TourDescriptionModel">
+<?import javafx.scene.text.Font?>
 
-    <columnConstraints>
-        <ColumnConstraints hgrow="ALWAYS" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints />
-        <RowConstraints vgrow="ALWAYS" />
-    </rowConstraints>
-
-    <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.valignment="TOP">
-        <Label text="Name: " />
-        <Label fx:id="selectedTourNameField" />
-    </HBox>
-    <TabPane tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="TOP">
-        <Tab text="Route">
-            <Pane fx:id="container" prefWidth="100" prefHeight="100">
-                <ImageView fx:id="selectedTourRouteInfoField" cache="true" cacheHint="SPEED" depthTest="ENABLE" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true"
-                           fitWidth="${container.width}" fitHeight="${container.height}"
-                           smooth="false" managed="false"/>
-            </Pane>
-        </Tab>
-        <Tab text="Description">
-            <TextArea fx:id="selectedTourDescField" editable="false" />
-        </Tab>
-        <GridPane.margin>
-            <Insets />
-        </GridPane.margin>
-    </TabPane>
-    <GridPane.margin>
-        <Insets right="10.0" />
-    </GridPane.margin>
-</GridPane>
-
+    <SplitPane dividerPositions="0.6" layoutX="227.0" layoutY="68.0" orientation="VERTICAL" prefHeight="333.0"
+               prefWidth="373.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="227.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.controller.MainViewController">
+        <AnchorPane minHeight="100.0" minWidth="0.0" prefHeight="421.0" prefWidth="1058.0">
+            <HBox prefHeight="10.0" prefWidth="470.0" AnchorPane.leftAnchor="0.0"
+                  AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                <Label fx:id="titleName" text="Title">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                    <padding>
+                        <Insets left="5.0"/>
+                    </padding>
+                </Label>
+            </HBox>
+            <TabPane layoutY="25.0" prefHeight="800.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE"
+                     AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                <Tab text="Description">
+                    <AnchorPane>
+                        <Label fx:id="description" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+                    </AnchorPane>
+                </Tab>
+                <Tab text="Route">
+                    <AnchorPane>
+                        <ImageView fx:id="route" fitHeight="400.0" fitWidth="700.0" layoutX="161.0" layoutY="14.0"
+                                   AnchorPane.bottomAnchor="357.0" AnchorPane.leftAnchor="161.0"
+                                   AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="14.0">
+                            <viewport>
+                                <Rectangle2D/>
+                            </viewport>
+                        </ImageView>
+                    </AnchorPane>
+                </Tab>
+                <Tab text="Adjacent Tour">
+                    <AnchorPane>
+                        <Label fx:id="adjacentTour" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+                    </AnchorPane>
+                </Tab>
+            </TabPane>
+        </AnchorPane>
+    </SplitPane>

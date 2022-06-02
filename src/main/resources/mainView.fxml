@@ -3,80 +3,167 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" prefHeight="800" prefWidth="1000" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.controller.MainViewController">
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<AnchorPane prefHeight="721.0" prefWidth="1287.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"  fx:controller="PresentationLayer.controller.MainViewController">
 
-  <columnConstraints>
-    <ColumnConstraints />
-    <ColumnConstraints hgrow="ALWAYS" />
-    <ColumnConstraints hgrow="ALWAYS" />
-    <ColumnConstraints hgrow="ALWAYS" />
-    <ColumnConstraints hgrow="ALWAYS" />
-    <ColumnConstraints hgrow="ALWAYS" />
-    <ColumnConstraints />
-
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints />
-    <RowConstraints />
-    <RowConstraints />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-    <RowConstraints vgrow="ALWAYS" />
-  </rowConstraints>
-
-  <!--region column0-->
-
-  <MenuBar GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.rowIndex="1">
+  <MenuBar prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+           AnchorPane.topAnchor="0.0">
     <Menu mnemonicParsing="false" text="File">
-      <MenuItem mnemonicParsing="false" onAction="#generateReport" text="Save Selected as PDF" />
-      <MenuItem mnemonicParsing="false" onAction="#generateMultiReport" text="Save All as PDF" />
+      <MenuItem fx:id="saveTourFile" mnemonicParsing="false" onAction="#saveTour" text="Save Tour"/>
     </Menu>
     <Menu mnemonicParsing="false" text="Edit">
-      <MenuItem mnemonicParsing="false" text="UNDO" />
-      <MenuItem mnemonicParsing="false" text="REDO" />
-    </Menu>
-    <Menu mnemonicParsing="false" text="Options">
-      <MenuItem mnemonicParsing="false" onAction="#exportData" text="Export as JSON" />
-      <MenuItem mnemonicParsing="false" onAction="#importData" text="Import as JSON" />
+      <MenuItem mnemonicParsing="false" text="Delete"/>
     </Menu>
     <Menu mnemonicParsing="false" text="Help">
-      <MenuItem mnemonicParsing="false" text="About" />
+      <MenuItem mnemonicParsing="false" text="About"/>
     </Menu>
   </MenuBar>
-
-  <HBox GridPane.columnIndex="0" GridPane.rowIndex="2">
-    <Label alignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="2">Search
-      Tour:
-    </Label>
-    <TextField fx:id="searchInput" promptText="Search Something">
+  <HBox layoutY="24.0" prefHeight="10.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+    <Label minWidth="132.0" prefHeight="35.0" prefWidth="132.0" text="Tour-Planner">
+      <font>
+        <Font size="20.0"/>
+      </font>
       <padding>
-        <Insets bottom="5.0" right="5.0" />
+        <Insets left="5.0"/>
       </padding>
-      <GridPane.margin>
-        <Insets left="10.0" right="10.0" />
-      </GridPane.margin>
+    </Label>
+    <TextField fx:id="searchField" prefHeight="25.0" prefWidth="276.0" HBox.hgrow="ALWAYS">
       <HBox.margin>
-        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        <Insets bottom="5.0" right="2.0" top="5.0"/>
       </HBox.margin>
     </TextField>
+    <Button minWidth="70.0" mnemonicParsing="false" onAction="#searchAction" prefWidth="70" text="Search"
+            HBox.hgrow="NEVER">
+      <HBox.margin>
+        <Insets bottom="5.0" right="5.0" top="5.0"/>
+      </HBox.margin>
+    </Button>
+
   </HBox>
+  <VBox layoutY="62.0" prefHeight="338.0" prefWidth="225.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="62.0">
+    <HBox prefHeight="4.0" prefWidth="126.0">
+      <VBox.margin>
+        <Insets bottom="5.0" top="5.0"/>
+      </VBox.margin>
+      <Label prefHeight="34.0" prefWidth="71.0" text="Tours">
+        <padding>
+          <Insets left="5.0"/>
+        </padding>
+        <font>
+          <Font size="15.0"/>
+        </font>
+      </Label>
+      <Button minWidth="59.0" mnemonicParsing="false" onAction="#addTour" prefHeight="20.0" prefWidth="59.0"
+              text="Add">
+        <HBox.margin>
+          <Insets right="2.0"/>
+        </HBox.margin>
+      </Button>
+      <Button fx:id="removeTour" minWidth="59.0" mnemonicParsing="false" onAction="#removeTour"
+              prefHeight="20.0" prefWidth="59.0" text="Remove">
+        <HBox.margin>
+          <Insets right="2.0"/>
+        </HBox.margin>
+      </Button>
+      <Button fx:id="editTour" minWidth="59.0" mnemonicParsing="false" onAction="#editTour" prefHeight="20.0"
+              prefWidth="59.0" text="Edit">
+        <HBox.margin>
+          <Insets/>
+        </HBox.margin>
+      </Button>
+    </HBox>
+    <ListView fx:id="listTourItems" prefHeight="335.0" prefWidth="126.0" VBox.vgrow="ALWAYS"/>
+  </VBox>
+  <SplitPane dividerPositions="0.6" layoutX="227.0" layoutY="68.0" orientation="VERTICAL" prefHeight="333.0"
+             prefWidth="373.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="227.0"
+             AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
+    <AnchorPane minHeight="100.0" minWidth="0.0" prefHeight="421.0" prefWidth="1058.0">
+      <HBox prefHeight="10.0" prefWidth="470.0" AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Label fx:id="titleName" text="Title">
+          <font>
+            <Font size="15.0"/>
+          </font>
+          <padding>
+            <Insets left="5.0"/>
+          </padding>
+        </Label>
+      </HBox>
+      <TabPane layoutY="25.0" prefHeight="800.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <Tab text="Description">
+          <AnchorPane>
+            <Label fx:id="description" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+          </AnchorPane>
+        </Tab>
+        <Tab text="Route">
+          <AnchorPane>
+            <ImageView fx:id="route" fitHeight="400.0" fitWidth="700.0" layoutX="161.0" layoutY="14.0"
+                       AnchorPane.bottomAnchor="357.0" AnchorPane.leftAnchor="161.0"
+                       AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="14.0">
+              <viewport>
+                <Rectangle2D/>
+              </viewport>
+            </ImageView>
+          </AnchorPane>
+        </Tab>
+        <Tab text="Adjacent Tour">
+          <AnchorPane>
+            <Label fx:id="adjacentTour" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+          </AnchorPane>
+        </Tab>
+      </TabPane>
+    </AnchorPane>
+    <AnchorPane minHeight="100.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+      <HBox prefHeight="10.0" prefWidth="470.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0">
+        <Label prefHeight="21.0" prefWidth="414.0" text="Logs" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="15.0"/>
+          </font>
+          <padding>
+            <Insets left="5.0"/>
+          </padding>
+        </Label>
+        <Region minWidth="0.0" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="addLog" minWidth="59.0" mnemonicParsing="false" onAction="#addNewLog" prefHeight="20.0"
+                prefWidth="59.0" text="Add" HBox.hgrow="NEVER">
+          <HBox.margin>
+            <Insets right="2.0"/>
+          </HBox.margin>
+        </Button>
+        <Button fx:id="removeLog" minWidth="59.0" mnemonicParsing="false" onAction="#removeLog"
+                prefHeight="20.0" prefWidth="50.0" text="Remove" HBox.hgrow="NEVER">
+          <HBox.margin>
+            <Insets right="2.0"/>
+          </HBox.margin>
+        </Button>
+        <Button fx:id="editLog" minWidth="59.0" mnemonicParsing="false" onAction="#editLog"
+                prefHeight="20.0" prefWidth="59.0" text="Edit" HBox.hgrow="NEVER">
+          <HBox.margin>
+            <Insets right="2.0"/>
+          </HBox.margin>
+        </Button>
+      </HBox>
+      <TableView fx:id="table" layoutX="-1.0" layoutY="25.0" prefHeight="140.0" prefWidth="470.0"
+                 AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                 AnchorPane.topAnchor="25.0">
+        <columns>
+          <TableColumn fx:id="date" minWidth="75.0" prefWidth="75.0" text="Date"/>
+          <TableColumn fx:id="report" minWidth="75.0" prefWidth="75.0" text="Report"/>
+          <TableColumn fx:id="distance" minWidth="75.0" prefWidth="75.0" text="Distance"/>
+          <TableColumn fx:id="time" minWidth="75.0" prefWidth="75.0" text="Time"/>
+          <TableColumn fx:id="rating" minWidth="75.0" prefWidth="75.0" text="Rating"/>
+          <TableColumn fx:id="weather" minWidth="75.0" prefWidth="75.0" text="Weather"/>
+          <TableColumn fx:id="speed" minWidth="95.0" prefWidth="95.0" text="Average Speed"/>
+        </columns>
+      </TableView>
+    </AnchorPane>
+  </SplitPane>
 
-  <fx:include fx:id="tourView" source="tourView.fxml" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="10" GridPane.valignment="TOP" />
 
+</AnchorPane>
 
-  <fx:include fx:id="tourDescriptionView" source="tourDescriptionView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2" GridPane.rowSpan="5" GridPane.valignment="TOP" />
-
-
-  <fx:include fx:id="tourLogView" source="tourLogView.fxml" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="6" GridPane.valignment="TOP" />
-
-
-</GridPane>

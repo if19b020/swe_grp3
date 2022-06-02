@@ -1,41 +1,178 @@
 package DataSourceLayer;
 
 // https://devtut.github.io/postgresql/connect-to-postgresql-from-java.html#connecting-with-java-sql-drivermanager-and-properties
-
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import businesslayer.Configurationmanager;
+import com.example.tourplanner.Tour;
+import com.example.tourplanner.TourLog;
+import java.io.FileNotFoundException;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class DataBaseConnection implements IDataBaseConnection {
+
+
     private final String connectionString;
+
 
     public DataBaseConnection(String connectionString) {
         this.connectionString = connectionString;
     }
 
-    private java.sql.Connection connect(String url, String user, String password)
-            throws ClassNotFoundException, java.sql.SQLException {
-        Class.forName("org.postgresql.Driver");
-        java.util.Properties props = new java.util.Properties();
-        // TODO save username + password in config file
-
+    private Connection CreateConnection() throws SQLException, FileNotFoundException {
+        String user = Configurationmanager.GetConfigProperty("Username");
+        String password = Configurationmanager.GetConfigProperty("Password");
         try {
             return DriverManager.getConnection(connectionString, user, password);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        throw new SQLException("Database connection failed.");
-
+        throw new SQLException("Establishing database connection failed.");
     }
 
     @Override
-    public int insertTour(String sqlQuery, ArrayList<Object> parameters) throws SQLException {
-        // TODO implement
-        return 0;
+    public int InsertNew(String sqlQuery, ArrayList<Object> parameters) throws SQLException {
+        try (Connection connection = CreateConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)) {
+
+            // dynamically add parameter
+            for (int i = 0; i < parameters.size(); i++) {
+                preparedStatement.setString(i + 1, parameters.get(i).toString());
+            }
+            int affectedRows = preparedStatement.executeUpdate();
+            System.out.println(affectedRows);
+            if (affectedRows > 0) {
+                try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+                    if (generatedKeys.next()) {
+                        return generatedKeys.getInt(1);
+                    }
+                }
+            }
+        } catch (SQLException | FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        throw new SQLException("Creating data failed, no ID obtained. " + sqlQuery);
     }
 
     @Override
-    public <T> void deleteTour(String sqlQuery, Integer id) throws SQLException {
-        // TODO implement
+    public <T> List<T> TourReader(String sqlQuery, Class<T> tourType) throws SQLException {
+        try (Connection connection = CreateConnection();
+             Statement statement = connection.createStatement()) {
+
+            ResultSet result = statement.executeQuery(sqlQuery);
+            if (tourType.getTypeName().equals(Tour.class.getName())) {
+                return (List<T>) QueryTourItemDataFromResultSet(result);
+            }
+            if (tourType.getTypeName().equals(TourLog.class.getName())) {
+                return (List<T>) QueryTourLogDataFromResultSet(result);
+            }
+        } catch (SQLException | FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        throw new SQLException("Reading data failed. " + sqlQuery);
+    }
+
+    @Override
+    public <T> List<T> TourReader(String sqlQuery, ArrayList<Object> parameters, Class<T> tourType) throws SQLException {
+        try (Connection connection = CreateConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)) {
+
+            // dynamically add parameter
+            for (int i = 0; i < parameters.size(); i++) {
+                preparedStatement.setString(i + 1, parameters.get(i).toString());
+            }
+
+            ResultSet result = preparedStatement.executeQuery();
+            if (tourType.getTypeName().equals(Tour.class.getName())) {
+                return (List<T>) QueryTourItemDataFromResultSet(result);
+            }
+            if (tourType.getTypeName().equals(TourLog.class.getName())) {
+                return (List<T>) QueryTourLogDataFromResultSet(result);
+            }
+
+        } catch (SQLException | FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        throw new SQLException("Creating data failed, no ID obtained. " + sqlQuery);
+    }
+
+    @Override
+    public <T> void delete(String sqlQuery, Integer id) {
+        try (Connection connection = CreateConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery)) {
+            preparedStatement.setInt(1, id);
+            preparedStatement.execute();
+
+        } catch (SQLException | FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void UpdateItem(String sql_update_by_id, ArrayList<Object> parameters) throws SQLException {
+        try (Connection connection = CreateConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql_update_by_id)) {
+
+            // dynamically add parameter
+            for (int i = 0; i < parameters.size(); i++) {
+                preparedStatement.setString(i + 1, parameters.get(i).toString());
+            }
+            preparedStatement.execute();
+            return;
+        } catch (SQLException | FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        throw new SQLException("Updating data failed, no ID obtained. " + sql_update_by_id);
+    }
+
+    @Override
+    public void UpdateLog(String sql_update_by_id, ArrayList<Object> parameters) throws SQLException {
+        try (Connection connection = CreateConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql_update_by_id)) {
+
+            // dynamically add parameter
+            for (int i = 0; i < parameters.size(); i++) {
+                preparedStatement.setString(i + 1, parameters.get(i).toString());
+            }
+            preparedStatement.execute();
+            return;
+        } catch (SQLException | FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        throw new SQLException("Updating data failed, no ID obtained. " + sql_update_by_id);
+    }
+
+
+    private List<Tour> QueryTourItemDataFromResultSet(ResultSet result) throws SQLException {
+        List<Tour> tourItemList = new ArrayList<Tour>();
+        while (result.next()) {
+            tourItemList.add(new Tour(
+                    result.getInt("Id"),
+                    result.getString("Name"),
+                    result.getString("Description"),
+                    result.getString("Distance"),
+                    result.getString("From"),
+                    result.getString("To")
+            ));
+        }
+        return tourItemList;
+    }
+
+    private List<TourLog> QueryTourLogDataFromResultSet(ResultSet result) throws SQLException {
+        List<TourLog> tourLogList = new ArrayList<TourLog>();
+        while (result.next()) {
+            tourLogList.add(new TourLog(
+                    result.getInt("Id"),
+                    result.getString("Date"),
+                    result.getString("Report"),
+                    result.getString("Distance"),
+                    result.getString("Time"),
+                    result.getString("Rating"),
+                    result.getString("Weather"),
+                    result.getString("Speed")
+            ));
+        }
+        return tourLogList;
     }
 }

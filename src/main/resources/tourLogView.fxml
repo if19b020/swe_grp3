@@ -4,29 +4,50 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.controller.TourLogViewController">
 
-    <columnConstraints>
-        <ColumnConstraints hgrow="ALWAYS" />
-        <ColumnConstraints hgrow="ALWAYS" />
-        <ColumnConstraints hgrow="ALWAYS" />
-        <ColumnConstraints hgrow="ALWAYS" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints  />
-        <RowConstraints vgrow="ALWAYS" />
-        <RowConstraints />
-    </rowConstraints>
-
-    <Label text="Logs:" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0" GridPane.valignment="TOP" />
-    <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.valignment="TOP">
-        <Button onAction="#addNewLog" text="+" />
-        <Button onAction="#showLog" text="~" />
-        <Button onAction="#removeLog" text="-" />
-        <Button onAction="#editLog" text="[]" />
-    </HBox>
-    <ListView fx:id="logsListView" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="TOP"/>
-    <GridPane.margin>
-        <Insets bottom="10.0" right="10.0" />
-    </GridPane.margin>
-</GridPane>
+<?import javafx.scene.text.Font?>
+<AnchorPane minHeight="100.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.controller.MainViewController">
+        <HBox prefHeight="10.0" prefWidth="470.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <Label prefHeight="21.0" prefWidth="414.0" text="Logs" HBox.hgrow="ALWAYS">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <padding>
+                    <Insets left="5.0"/>
+                </padding>
+            </Label>
+            <Region minWidth="0.0" HBox.hgrow="ALWAYS"/>
+            <Button fx:id="addLog" minWidth="59.0" mnemonicParsing="false" onAction="#addNewLog" prefHeight="20.0"
+                    prefWidth="59.0" text="Add" HBox.hgrow="NEVER">
+                <HBox.margin>
+                    <Insets right="2.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="removeLog" minWidth="59.0" mnemonicParsing="false" onAction="#removeLog"
+                    prefHeight="20.0" prefWidth="50.0" text="Remove" HBox.hgrow="NEVER">
+                <HBox.margin>
+                    <Insets right="2.0"/>
+                </HBox.margin>
+            </Button>
+            <Button fx:id="editLog" minWidth="59.0" mnemonicParsing="false" onAction="#editLog"
+                    prefHeight="20.0" prefWidth="59.0" text="Edit" HBox.hgrow="NEVER">
+                <HBox.margin>
+                    <Insets right="2.0"/>
+                </HBox.margin>
+            </Button>
+        </HBox>
+        <TableView fx:id="table" layoutX="-1.0" layoutY="25.0" prefHeight="140.0" prefWidth="470.0"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="25.0">
+            <columns>
+                <TableColumn fx:id="date" minWidth="75.0" prefWidth="75.0" text="Date"/>
+                <TableColumn fx:id="report" minWidth="75.0" prefWidth="75.0" text="Report"/>
+                <TableColumn fx:id="distance" minWidth="75.0" prefWidth="75.0" text="Distance"/>
+                <TableColumn fx:id="time" minWidth="75.0" prefWidth="75.0" text="Time"/>
+                <TableColumn fx:id="rating" minWidth="75.0" prefWidth="75.0" text="Rating"/>
+                <TableColumn fx:id="weather" minWidth="75.0" prefWidth="75.0" text="Weather"/>
+                <TableColumn fx:id="speed" minWidth="95.0" prefWidth="95.0" text="Average Speed"/>
+            </columns>
+        </TableView>
+    </AnchorPane>

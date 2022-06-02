@@ -6,26 +6,42 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Label?>
 
-<GridPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.controller.TourViewController">
+<?import javafx.scene.text.Font?>
 
-    <columnConstraints>
-        <ColumnConstraints hgrow="ALWAYS" />
-        <ColumnConstraints hgrow="ALWAYS" />
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints />
-        <RowConstraints vgrow="ALWAYS" />
-    </rowConstraints>
-
-    <Label text="Tours" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.valignment="TOP" />
-    <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="0" GridPane.valignment="CENTER">
-        <Button text="+" onAction="#addNewTour" />
-        <Button text="-" onAction="#removeTour"/>
-        <Button text="[]" onAction="#editTour" />
-    </HBox>
-    <GridPane.margin>
-        <Insets left="10.0" />
-    </GridPane.margin>
-    <ListView fx:id="toursListView" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
-
-</GridPane>
+    <AnchorPane  xmlns="http://javafx.com/javafx/11.0.1"
+                xmlns:fx="http://javafx.com/fxml/1" fx:controller="PresentationLayer.controller.MainViewController">
+<VBox layoutY="62.0" prefHeight="338.0" prefWidth="225.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="62.0">
+<HBox prefHeight="4.0" prefWidth="126.0">
+    <VBox.margin>
+        <Insets bottom="5.0" top="5.0"/>
+    </VBox.margin>
+    <Label prefHeight="34.0" prefWidth="71.0" text="Tours">
+        <padding>
+            <Insets left="5.0"/>
+        </padding>
+        <font>
+            <Font size="15.0"/>
+        </font>
+    </Label>
+    <Button minWidth="59.0" mnemonicParsing="false" onAction="#addTour" prefHeight="20.0" prefWidth="59.0"
+            text="Add">
+        <HBox.margin>
+            <Insets right="2.0"/>
+        </HBox.margin>
+    </Button>
+    <Button fx:id="removeTour" minWidth="59.0" mnemonicParsing="false" onAction="#removeTour"
+            prefHeight="20.0" prefWidth="59.0" text="Remove">
+        <HBox.margin>
+            <Insets right="2.0"/>
+        </HBox.margin>
+    </Button>
+    <Button fx:id="editTour" minWidth="59.0" mnemonicParsing="false" onAction="#editTour" prefHeight="20.0"
+            prefWidth="59.0" text="Edit">
+        <HBox.margin>
+            <Insets/>
+        </HBox.margin>
+    </Button>
+</HBox>
+<ListView fx:id="listTourItems" prefHeight="335.0" prefWidth="126.0" VBox.vgrow="ALWAYS"/>
+</VBox>
+</AnchorPane>
