@@ -1,0 +1,33 @@
+2022-06-02 17:22:20.230 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 17:32:48.478 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 17:34:15.779 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:00:37.996 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:01:56.198 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:06:49.302 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:14:31.499 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:18:37.619 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:20:07.217 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:20:37.799 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:22:16.554 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:37:24.643 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 00:39:23.971 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 01:04:56.519 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 01:13:00.072 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 01:23:15.682 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 01:54:49.806 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 01:57:38.392 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:00:10.828 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:05:25.343 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:07:44.701 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:08:09.601 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log couldn't be created because the inputs contained wrong characters.
+2022-06-03 02:11:27.282 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:12:06.109 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log couldn't be created because the inputs contained wrong characters.
+2022-06-03 02:12:26.104 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log couldn't be created because the inputs contained wrong characters.
+2022-06-03 02:13:04.937 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:14:03.912 [JavaFX Application Thread] INFO  PresentationLayer.TourViewModel - Address input contained wrong values and no tour was added or changed.
+2022-06-03 02:14:26.332 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:15:41.187 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:21:56.418 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:26:25.282 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:28:45.132 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-03 02:36:06.632 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
