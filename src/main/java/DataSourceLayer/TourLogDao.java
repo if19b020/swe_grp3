@@ -10,12 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TourLogDao implements ITourLogDao {
-    private final String SQL_FIND_BY_ID = "SELECT * FROM \"tourLog\" WHERE \"Id\"=CAST(? AS INTEGER);";
-    private final String SQL_DELETE_BY_ID = "DELETE FROM \"tourLog\" WHERE \"Id\"=CAST(? AS INTEGER);";
-    private final String SQL_UPDATE_BY_ID = "UPDATE \"tourLog\" set \"Date\" = ?, \"Report\" = ?, \"Distance\" = ?, \"Time\" = ?, \"Rating\" = ?," +
+    private final String SQL_FIND_BY_ID = "SELECT * FROM \"tourlog\" WHERE \"Id\"=CAST(? AS INTEGER);";
+    private final String SQL_DELETE_BY_ID = "DELETE FROM \"tourlog\" WHERE \"Id\"=CAST(? AS INTEGER);";
+    private final String SQL_UPDATE_BY_ID = "UPDATE \"tourlog\" set \"Date\" = ?, \"Report\" = ?, \"Distance\" = ?, \"Time\" = ?, \"Rating\" = ?," +
             " \"Weather\" = ?, \"Speed\" = ?, \"Altitude\" = ?, \"Difficulty\" = ?, \"Calories\" = ? WHERE \"Id\"=CAST(? AS INTEGER);";
-    private final String SQL_FIND_BY_TOURITEM = "SELECT * FROM \"tourLog\" WHERE \"fk_TourId\"=CAST(? AS INTEGER);";
-    private final String SQL_INSERT_NEW_ITEMLOG = "INSERT INTO \"tourLog\" (\"fk_TourId\", \"Date\", \"Report\", \"Distance\", " +
+    private final String SQL_FIND_BY_TOURITEM = "SELECT * FROM \"tourlog\" WHERE \"fk_TourId\"=CAST(? AS INTEGER);";
+    private final String SQL_INSERT_NEW_ITEMLOG = "INSERT INTO \"tourlog\" (\"fk_TourId\", \"Date\", \"Report\", \"Distance\", " +
             "\"Time\", \"Rating\", \"Weather\", \"Speed\", \"Altitude\", \"Difficulty\", \"Calories\") VALUES (CAST(? AS INTEGER), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
     private final IDataBaseConnection database;

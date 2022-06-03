@@ -52,7 +52,7 @@ public class MapQuest {
         ByteArrayInputStream bis = new ByteArrayInputStream(imgInBytes);
 
         BufferedImage img = ImageIO.read(bis);
-   //     ImageIO.write(img, "jpg", new File("Images/"+ name + ".jpg"));
+        ImageIO.write(img, "jpg", new File("Images/"+ name + ".jpg"));
 
         return String.valueOf(distance);
     }

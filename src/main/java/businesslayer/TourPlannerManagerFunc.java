@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 import javafx.collections.ObservableList;
 
 public class TourPlannerManagerFunc implements TourplannerManager{
-
     Logger logger = LogManager.getLogger(TourplannerManager.class);
 
     @Override
@@ -29,8 +28,8 @@ public class TourPlannerManagerFunc implements TourplannerManager{
 
     @Override
     public List<Tour> GetItems() throws SQLException {
-        ITourDao tourDAO = DataFactory.CreateTourDao();
-        return tourDAO.GetItems();
+        ITourDao tourItemDAO = DataFactory.CreateTourItemDAO();
+        return tourItemDAO.GetItems();
     }
 
     public List<TourLog> GetLogs(Tour tourItem) throws SQLException {
@@ -73,16 +72,16 @@ public class TourPlannerManagerFunc implements TourplannerManager{
     }
 
     @Override
-    public void CreateTourItem(String name, String description, String distance, String from, String to) throws SQLException {
-        ITourDao tourItemDAO = DataFactory.CreateTourDao();
-        tourItemDAO.AddNewItem(name, description, distance, from, to);
+    public void CreateTourItem(String name, String description, String distance, String start, String end) throws SQLException {
+        ITourDao tourItemDAO = DataFactory.CreateTourItemDAO();
+        tourItemDAO.AddNewItem(name, description, distance, start, end);
         logger.info("Tour was successfully created.");
     }
 
     @Override
-    public void UpdateTourItem(Integer id, String name, String description, String distance, String from, String to) throws SQLException {
-        ITourDao tourItemDAO = DataFactory.CreateTourDao();
-        tourItemDAO.UpdateTourById(id, name, description, distance, from, to);
+    public void UpdateTourItem(Integer id, String name, String description, String distance, String start, String end) throws SQLException {
+        ITourDao tourItemDAO = DataFactory.CreateTourItemDAO();
+        tourItemDAO.UpdateTourById(id, name, description, distance, start, end);
         logger.info("Tour was successfully changed.");
     }
 
@@ -110,7 +109,7 @@ public class TourPlannerManagerFunc implements TourplannerManager{
     @Override
     public void UpdateLogItem(TourLog genLog, Integer id) throws SQLException {
         InputValidator inputValidation = new InputValidator();
-        if( !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(genLog.getSpeed())
+        if(!inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(genLog.getSpeed())
                 || !inputValidation.containsOnlyNumbersOrIsEmpty(genLog.getRating()) || !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(genLog.getDistance())
                 || !inputValidation.containsOnlyLettersOrIsEmpty(genLog.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(genLog.getTime())
                 || !inputValidation.checksIfDateFormatIsCorrect(genLog.getDate())){
@@ -124,7 +123,7 @@ public class TourPlannerManagerFunc implements TourplannerManager{
 
     @Override
     public void DeleteTour(Tour item) {
-        ITourDao tourItemDAO = DataFactory.CreateTourDao();
+        ITourDao tourItemDAO = DataFactory.CreateTourItemDAO();
         try {
             tourItemDAO.DeleteById(item.getId());
             logger.info("Tour was deleted.");
@@ -149,6 +148,6 @@ public class TourPlannerManagerFunc implements TourplannerManager{
 
     @Override
     public Tour GetItem(Integer id) throws SQLException {
-        return DataFactory.CreateTourDao().FindById(id);
+        return DataFactory.CreateTourItemDAO().FindById(id);
     }
 }

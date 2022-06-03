@@ -1,16 +1,10 @@
 package PresentationLayer;
-
 import businesslayer.TourplannerManager;
-
 import businesslayer.TourplannerManagerFactory;
 import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import lombok.Getter;
-import lombok.Setter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONException;

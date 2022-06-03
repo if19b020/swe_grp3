@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 
 
 public class DataFactory {
+
     private static IDataBaseConnection database;
 
     public static IDataBaseConnection GetDatabase() throws FileNotFoundException {
@@ -31,7 +32,7 @@ public class DataFactory {
         }
     }
 
-    public static ITourDao CreateTourDao() {
+    public static ITourDao CreateTourItemDAO() {
         try {
             Class<TourDao> cls = (Class<TourDao>) Class.forName(TourDao.class.getName());
             return cls.getConstructor().newInstance();

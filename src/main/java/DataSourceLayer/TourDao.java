@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TourDao implements ITourDao {
-    private final String SQL_FIND_BY_ID = "SELECT * FROM \"tour\" WHERE \"Id\"=CAST(? AS INTEGER);";
-    private final String SQL_DELETE_BY_ID = "DELETE FROM \"tour\" WHERE \"Id\"=CAST(? AS INTEGER);";
-    private final String SQL_UPDATE_BY_ID = "UPDATE \"tour\" set \"Name\" = ?, \"Description\" = ?, \"Distance\" = ?, \"From\" = ?, \"To\" = ? WHERE \"Id\"=CAST(? AS INTEGER);";
-    private final String SQL_GET_ALL_ITEMS = "SELECT * FROM \"tour\";";
-    private final String SQL_INSERT_NEW_ITEM = "INSERT INTO \"tour\" (\"Name\", \"Description\", \"Distance\", \"From\", \"To\") VALUES (?, ?, ?, ?, ?);";
+    private final String SQL_FIND_BY_ID = "SELECT * FROM \"tours\" WHERE \"id\"=CAST(? AS INTEGER);";
+    private final String SQL_DELETE_BY_ID = "DELETE FROM \"tours\" WHERE \"id\"=CAST(? AS INTEGER);";
+    private final String SQL_UPDATE_BY_ID = "UPDATE \"tour\" set \"name\" = ?, \"description\" = ?, \"distance\" = ?, \"from\" = ?, \"to\" = ? WHERE \"Id\"=CAST(? AS INTEGER);";
+    private final String SQL_GET_ALL_ITEMS = "SELECT * FROM \"tours\";";
+    private final String SQL_INSERT_NEW_ITEM = "INSERT INTO \"tours\" (\"name\", \"description\", \"distance\", \"from\", \"to\") VALUES (?, ?, ?, ?, ?);";
     private final IDataBaseConnection database;
 
     public TourDao() throws FileNotFoundException {
