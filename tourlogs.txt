@@ -1,0 +1,9 @@
+2022-06-02 17:54:39.932 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 18:07:01.182 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 18:10:19.956 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 18:17:37.101 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 18:47:12.091 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 18:50:44.947 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 18:51:57.669 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 18:53:46.592 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-02 18:57:11.520 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
