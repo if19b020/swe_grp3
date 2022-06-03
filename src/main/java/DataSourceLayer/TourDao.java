@@ -11,7 +11,7 @@ import java.util.List;
 public class TourDao implements ITourDao {
     private final String SQL_FIND_BY_ID = "SELECT * FROM \"tours\" WHERE \"id\"=CAST(? AS INTEGER);";
     private final String SQL_DELETE_BY_ID = "DELETE FROM \"tours\" WHERE \"id\"=CAST(? AS INTEGER);";
-    private final String SQL_UPDATE_BY_ID = "UPDATE \"tour\" set \"name\" = ?, \"description\" = ?, \"distance\" = ?, \"from\" = ?, \"to\" = ? WHERE \"Id\"=CAST(? AS INTEGER);";
+    private final String SQL_UPDATE_BY_ID = "UPDATE \"tours\" set \"name\" = ?, \"description\" = ?, \"distance\" = ?, \"from\" = ?, \"to\" = ? WHERE \"id\"=CAST(? AS INTEGER);";
     private final String SQL_GET_ALL_ITEMS = "SELECT * FROM \"tours\";";
     private final String SQL_INSERT_NEW_ITEM = "INSERT INTO \"tours\" (\"name\", \"description\", \"distance\", \"from\", \"to\") VALUES (?, ?, ?, ?, ?);";
     private final IDataBaseConnection database;
