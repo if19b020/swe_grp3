@@ -22,7 +22,7 @@ public class PdfManager {
             document.add(tourName);
 
             Image image = Image.getInstance("Images/" + name + ".jpg");
-            image.scaleAbsolute(200f, 150f);
+            image.scaleAbsolute(500f, 250f);
             image.setAlignment(Element.ALIGN_CENTER);
             document.add(image);
 

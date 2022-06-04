@@ -24,7 +24,6 @@ public class MainViewController implements Initializable {
     public TextField searchField;
     public Label titleName;
     public Label description;
-    public Label adjacentTour;
     public ImageView route;
     public Button editLog;
     public Button addLog;
@@ -80,7 +79,6 @@ public class MainViewController implements Initializable {
         Bindings.bindBidirectional(searchField.textProperty(), mainViewModel.getSearch());
         Bindings.bindBidirectional(titleName.textProperty(), mainViewModel.getTitle());
         Bindings.bindBidirectional(description.textProperty(), mainViewModel.getDescription());
-        Bindings.bindBidirectional(adjacentTour.textProperty(), mainViewModel.getAdjacentTour());
         Bindings.bindBidirectional(route.imageProperty(), mainViewModel.getRoute());
         table.setItems(mainViewModel.getTourLogs());
         date.setCellValueFactory(new PropertyValueFactory<>("Date"));

@@ -77,3 +77,11 @@
 2022-06-04 16:08:31.098 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
 2022-06-04 16:08:45.604 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was successfully created.
 2022-06-04 16:08:55.152 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was successfully created.
+2022-06-04 16:50:54.283 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 16:52:48.146 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was successfully created.
+2022-06-04 16:53:19.605 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was successfully changed.
+2022-06-04 16:54:43.011 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was successfully created.
+2022-06-04 16:57:18.735 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 17:01:34.328 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 18:24:24.598 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 18:24:28.577 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour info successfully saved to PDF file.

@@ -15,7 +15,7 @@
       <MenuItem fx:id="saveTourFile" mnemonicParsing="false" onAction="#saveTour" text="Save Tour"/>
     </Menu>
     <Menu mnemonicParsing="false" text="Edit">
-      <MenuItem mnemonicParsing="false" text="Delete"/>
+      <MenuItem mnemonicParsing="false" text="Edit"/>
     </Menu>
     <Menu mnemonicParsing="false" text="Help">
       <MenuItem mnemonicParsing="false" text="About"/>
@@ -110,11 +110,7 @@
             </ImageView>
           </AnchorPane>
         </Tab>
-        <Tab text="Adjacent Tour">
-          <AnchorPane>
-            <Label fx:id="adjacentTour" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0"/>
-          </AnchorPane>
-        </Tab>
+
       </TabPane>
     </AnchorPane>
     <AnchorPane minHeight="100.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
