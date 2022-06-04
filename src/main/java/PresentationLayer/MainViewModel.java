@@ -91,9 +91,9 @@ public class MainViewModel {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/createLogView.fxml"));
         stage.setScene(new Scene(loader.load(), 280, 580));
         stage.setTitle("Manage Log");
-        stage.setMinWidth(580);
+        stage.setMinWidth(800);
         stage.setMinHeight(280);
-        stage.setMaxWidth(580);
+        stage.setMaxWidth(800);
         stage.setMaxHeight(280);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
