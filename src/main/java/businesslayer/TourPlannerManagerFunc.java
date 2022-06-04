@@ -88,13 +88,11 @@ public class TourPlannerManagerFunc implements TourplannerManager{
     @Override
     public void CreateTourLog(TourLog log, Tour item) throws SQLException {
         InputValidator inputValidation = new InputValidator();
-        /*if(    !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(log.getSpeed())
-                || !inputValidation.containsOnlyNumbersOrIsEmpty(log.getRating()) || !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(log.getDistance())
-                || !inputValidation.containsOnlyLettersOrIsEmpty(log.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(log.getTime())
+        if(     !inputValidation.containsOnlyLettersOrIsEmpty(log.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(log.getTime())
                 || !inputValidation.checksIfDateFormatIsCorrect(log.getDate())){
             logger.info("Log couldn't be created because the inputs contained wrong characters.");
             return;
-        }*/
+        }
         ITourLogDao tourLogDAO = DataFactory.CreateTourLogDAO();
         tourLogDAO.AddNewItemLog(log, item);
         logger.info("Log was successfully created.");
@@ -109,9 +107,7 @@ public class TourPlannerManagerFunc implements TourplannerManager{
     @Override
     public void UpdateLogItem(TourLog genLog, Integer id) throws SQLException {
         InputValidator inputValidation = new InputValidator();
-        if(!inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(genLog.getSpeed())
-                || !inputValidation.containsOnlyNumbersOrIsEmpty(genLog.getRating()) || !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(genLog.getDistance())
-                || !inputValidation.containsOnlyLettersOrIsEmpty(genLog.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(genLog.getTime())
+        if(     !inputValidation.containsOnlyLettersOrIsEmpty(genLog.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(genLog.getTime())
                 || !inputValidation.checksIfDateFormatIsCorrect(genLog.getDate())){
             logger.info("Log couldn't be changed because the inputs contained wrong characters.");
             return;
