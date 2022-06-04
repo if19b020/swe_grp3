@@ -20,7 +20,7 @@
     </Menu>
   </MenuBar>
   <HBox layoutY="24.0" prefHeight="10.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-    <Label minWidth="132.0" prefHeight="34.0" prefWidth="154.0" text="Tour-Planner">
+    <Label minWidth="132.0" prefHeight="34.0" prefWidth="154.0" text="Tour Planner">
       <font>
         <Font size="20.0" />
       </font>

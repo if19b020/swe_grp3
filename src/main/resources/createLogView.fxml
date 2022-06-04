@@ -57,7 +57,7 @@
         <TextField fx:id="weatherField" layoutX="81.0" layoutY="10.0" prefHeight="25.0" prefWidth="211.0" />
     </HBox>
     <HBox layoutX="10.0" layoutY="75.0" prefHeight="8.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="95.0">
-        <Label prefHeight="24.0" prefWidth="153.0" text="Av. Speed" HBox.hgrow="NEVER">
+        <Label prefHeight="24.0" prefWidth="153.0" text="Average Speed" HBox.hgrow="NEVER">
             <padding>
                 <Insets left="5.0" />
             </padding>

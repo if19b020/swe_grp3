@@ -31,7 +31,6 @@ public class MainViewModel {
 
     private final TourplannerManager manager = TourplannerManagerFactory.getManager();
     private final Property<Tour> currentTour = new SimpleObjectProperty<>();
-    private String adjacent;
 
     @Getter private final ObservableList<Tour> tourItems = FXCollections.observableArrayList();
     @Getter private final ObservableList<TourLog> tourLogs = FXCollections.observableArrayList();
