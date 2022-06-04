@@ -16,4 +16,8 @@ public class Tour {
     public String From;
     public String To;
 
+    public String getFullDescription() {
+        return "Name: \t\t" + getName() + "\nFrom: \t\t" + getFrom() + "\nTo: \t\t\t" + getTo() +
+                "\nDistance: \t\t" + getDistance() + " km\nDescription: \t" + getDescription();
+    }
 }

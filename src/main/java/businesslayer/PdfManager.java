@@ -20,6 +20,7 @@ public class PdfManager {
             Paragraph tourName = new Paragraph("Tour: " + name);
             tourName.setAlignment(Element.ALIGN_CENTER);
             document.add(tourName);
+            document.add(new Paragraph(tour.getFullDescription()));
 
             Image image = Image.getInstance("Images/" + name + ".jpg");
             image.scaleAbsolute(500f, 250f);

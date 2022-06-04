@@ -45,7 +45,7 @@ public class MainViewModel {
         if ((newValue != null) && (oldValue) != (newValue)) {
             currentTour.setValue(newValue);
             title.set(newValue.getName());
-            description.set(fullDescription(newValue));
+            description.set(newValue.getFullDescription());
             tourLogs.clear();
             try {
                 tourLogs.addAll(manager.GetLogs(newValue));
@@ -61,11 +61,6 @@ public class MainViewModel {
             }
         }
     };
-
-    private String fullDescription(Tour tour) {
-        return "Name:\t\t" + tour.getName() + "\nFrom:\t\t" + tour.getFrom() + "\nTo:\t\t\t" + tour.getTo() +
-                "\nDistance:\t\t" + tour.getDistance() + " km\nDescription:\t" + tour.getDescription();
-    }
 
     private void refresh() throws SQLException {
         tourItems.clear();
