@@ -31,3 +31,49 @@
 2022-06-03 02:26:25.282 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
 2022-06-03 02:28:45.132 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
 2022-06-03 02:36:06.632 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 14:58:20.036 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 14:59:08.114 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:04:09.466 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:06:38.037 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log couldn't be created because the inputs contained wrong characters.
+2022-06-04 15:12:32.179 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:13:30.965 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log couldn't be created because the inputs contained wrong characters.
+2022-06-04 15:27:25.540 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log couldn't be created because the inputs contained wrong characters.
+2022-06-04 15:31:14.684 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:34:16.816 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log couldn't be created because the inputs contained wrong characters.
+2022-06-04 15:35:29.901 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:40:45.105 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:41:47.107 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:44:29.794 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:48:54.210 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:49:33.463 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:52:37.416 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:55:13.192 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:55:27.580 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was deleted.
+2022-06-04 15:55:27.581 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour image was successfully removed.
+2022-06-04 15:55:29.959 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was deleted.
+2022-06-04 15:55:29.960 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour image was successfully removed.
+2022-06-04 15:55:32.804 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was deleted.
+2022-06-04 15:55:32.805 [JavaFX Application Thread] ERROR businesslayer.TourplannerManager - Tour image couldn't be deleted.
+2022-06-04 15:55:42.450 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
+2022-06-04 15:55:44.717 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
+2022-06-04 15:57:05.897 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:57:14.556 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
+2022-06-04 15:57:18.030 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
+2022-06-04 15:57:21.203 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
+2022-06-04 15:57:23.943 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
+2022-06-04 15:57:27.146 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
+2022-06-04 15:58:33.713 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 15:58:43.934 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour info successfully saved to PDF file.
+2022-06-04 15:58:55.641 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour info successfully saved to PDF file.
+2022-06-04 16:00:46.565 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 16:00:50.630 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour info successfully saved to PDF file.
+2022-06-04 16:05:05.713 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 16:05:16.052 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was successfully created.
+2022-06-04 16:05:51.220 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was deleted.
+2022-06-04 16:05:51.220 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour image was successfully removed.
+2022-06-04 16:07:29.184 [JavaFX Application Thread] INFO  com.example.tourplanner.Main - Application started
+2022-06-04 16:07:58.216 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was successfully created.
+2022-06-04 16:08:25.016 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was successfully created.
+2022-06-04 16:08:31.098 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was deleted.
+2022-06-04 16:08:45.604 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Tour was successfully created.
+2022-06-04 16:08:55.152 [JavaFX Application Thread] INFO  businesslayer.TourplannerManager - Log was successfully created.
