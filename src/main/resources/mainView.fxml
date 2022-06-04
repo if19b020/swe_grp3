@@ -40,7 +40,7 @@
     </Button>
 
   </HBox>
-  <VBox layoutY="62.0" prefHeight="659.0" prefWidth="313.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="62.0">
+  <VBox layoutY="62.0" prefHeight="659.0" prefWidth="285.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="62.0">
     <HBox prefHeight="4.0" prefWidth="126.0">
       <VBox.margin>
         <Insets bottom="5.0" top="5.0" />
@@ -71,7 +71,7 @@
     </HBox>
     <ListView fx:id="listTourItems" prefHeight="625.0" prefWidth="285.0" VBox.vgrow="ALWAYS" />
   </VBox>
-  <SplitPane dividerPositions="0.6" layoutX="318.0" layoutY="68.0" orientation="VERTICAL" prefHeight="654.0" prefWidth="969.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="318.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
+  <SplitPane dividerPositions="0.6" layoutX="293.0" layoutY="68.0" orientation="VERTICAL" prefHeight="654.0" prefWidth="994.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
     <AnchorPane minHeight="100.0" minWidth="0.0" prefHeight="421.0" prefWidth="1058.0">
       <HBox prefHeight="10.0" prefWidth="470.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <Label fx:id="titleName" text="Title">
