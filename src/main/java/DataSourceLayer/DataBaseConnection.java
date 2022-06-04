@@ -41,7 +41,7 @@ public class DataBaseConnection implements IDataBaseConnection {
                 preparedStatement.setString(i + 1, parameters.get(i).toString());
             }
             int affectedRows = preparedStatement.executeUpdate();
-            System.out.println(affectedRows);
+            //System.out.println(affectedRows);
             if (affectedRows > 0) {
                 try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
                     if (generatedKeys.next()) {
