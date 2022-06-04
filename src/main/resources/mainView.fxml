@@ -10,7 +10,7 @@
 
   <MenuBar prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
     <Menu mnemonicParsing="false" text="File">
-      <MenuItem fx:id="saveTourFile" mnemonicParsing="false" onAction="#saveTour" text="Save Tour" />
+      <MenuItem fx:id="saveTourFile" mnemonicParsing="false" onAction="#saveTour" text="Save tour report as PDF" />
     </Menu>
     <Menu mnemonicParsing="false" text="Edit">
       <MenuItem mnemonicParsing="false" text="Edit" />
