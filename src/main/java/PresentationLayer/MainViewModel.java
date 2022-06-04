@@ -45,15 +45,7 @@ public class MainViewModel {
         if ((newValue != null) && (oldValue) != (newValue)) {
             currentTour.setValue(newValue);
             title.set(newValue.getName());
-            //description.set(newValue.getDescription() + "From:" + newValue.getFrom());
             description.set(fullDescription(newValue));
-            /*adjacent = ("Following tours start where yours finishes if you want to prolong your tour:\n");
-            tourItems.forEach((item) -> {
-                if(item.getTo().equals(currentTour.getValue().getFrom())) {
-                    adjacent = adjacent.concat(item.getName()).concat("\n");
-                }
-            });
-            adjacentTour.setValue(adjacent);*/
             tourLogs.clear();
             try {
                 tourLogs.addAll(manager.GetLogs(newValue));
@@ -71,9 +63,8 @@ public class MainViewModel {
     };
 
     private String fullDescription(Tour tour) {
-        String description = "Name: " + tour.getName() + "\nFrom: " + tour.getFrom() + "\nTo: " + tour.getTo() +
-                "\nDistance: " + tour.getDistance() + "km\nDescription:" + tour.getDescription();
-        return description;
+        return "Name:\t\t" + tour.getName() + "\nFrom:\t\t" + tour.getFrom() + "\nTo:\t\t\t" + tour.getTo() +
+                "\nDistance:\t\t" + tour.getDistance() + " km\nDescription:\t" + tour.getDescription();
     }
 
     private void refresh() throws SQLException {

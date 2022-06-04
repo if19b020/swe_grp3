@@ -31,8 +31,7 @@ public class TourViewModel {
         }
         if(id == null){
             String distance = manager.GetMapQuest(name.getValue(), from.getValue(), to.getValue());
-            descriptionWithDistance = ("This Tour has a total length of "+distance+"km\n" +description.getValue());
-            manager.CreateTourItem(name.getValue(), descriptionWithDistance, distance, from.getValue(), to.getValue());
+            manager.CreateTourItem(name.getValue(), description.getValue(), distance, from.getValue(), to.getValue());
         } else {
             if(!name.getValue().equals(oldName)){
                 manager.DeleteTourImage("Images/"+oldName+".jpg");

@@ -72,9 +72,9 @@ public class TourPlannerManagerFunc implements TourplannerManager{
     }
 
     @Override
-    public void CreateTourItem(String name, String description, String distance, String start, String end) throws SQLException {
+    public void CreateTourItem(String name, String description, String distance, String from, String to) throws SQLException {
         ITourDao tourItemDAO = DataFactory.CreateTourItemDAO();
-        tourItemDAO.AddNewItem(name, description, distance, start, end);
+        tourItemDAO.AddNewItem(name, description, distance, from, to);
         logger.info("Tour was successfully created.");
     }
 
