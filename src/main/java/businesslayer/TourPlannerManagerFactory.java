@@ -1,9 +1,9 @@
 package businesslayer;
 
-public class TourplannerManagerFactory {
-  private static TourplannerManager manager;
+public class TourPlannerManagerFactory {
+  private static TourPlannerManager manager;
 
-    public static TourplannerManager getManager() {
+    public static TourPlannerManager getManager() {
         if (manager == null) {
             manager = new TourPlannerManagerFunc();
         }

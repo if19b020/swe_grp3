@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javafx.collections.ObservableList;
 
-public class TourPlannerManagerFunc implements TourplannerManager{
-    Logger logger = LogManager.getLogger(TourplannerManager.class);
+public class TourPlannerManagerFunc implements TourPlannerManager {
+    Logger logger = LogManager.getLogger(TourPlannerManager.class);
 
     @Override
     public String GetMapQuest(String name, String from, String to) throws IOException, JSONException, InterruptedException {

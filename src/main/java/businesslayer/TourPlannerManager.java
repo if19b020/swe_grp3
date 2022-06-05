@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface TourplannerManager {
+public interface TourPlannerManager {
     List<Tour> GetItems() throws SQLException;
     List<Tour> Search(String itemName, boolean caseSensitive) throws SQLException;
     Tour GetItem(Integer id) throws SQLException;

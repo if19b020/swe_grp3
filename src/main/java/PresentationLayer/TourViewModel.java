@@ -1,6 +1,6 @@
 package PresentationLayer;
-import businesslayer.TourplannerManager;
-import businesslayer.TourplannerManagerFactory;
+import businesslayer.TourPlannerManager;
+import businesslayer.TourPlannerManagerFactory;
 import businesslayer.Tour;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class TourViewModel {
-    private final TourplannerManager manager = TourplannerManagerFactory.getManager();
+    private final TourPlannerManager manager = TourPlannerManagerFactory.getManager();
     private Integer id = null;
     private String oldName;
     @Getter private final StringProperty name = new SimpleStringProperty("");

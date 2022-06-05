@@ -2,8 +2,8 @@ package PresentationLayer;
 
 import PresentationLayer.controller.TourLogViewController;
 import PresentationLayer.controller.TourViewController;
-import businesslayer.TourplannerManager;
-import businesslayer.TourplannerManagerFactory;
+import businesslayer.TourPlannerManager;
+import businesslayer.TourPlannerManagerFactory;
 import businesslayer.Tour;
 import businesslayer.TourLog;
 import javafx.beans.property.*;
@@ -29,7 +29,7 @@ public class MainViewModel {
         title.set("Title");
     }
 
-    private final TourplannerManager manager = TourplannerManagerFactory.getManager();
+    private final TourPlannerManager manager = TourPlannerManagerFactory.getManager();
     private final Property<Tour> currentTour = new SimpleObjectProperty<>();
 
     @Getter private final ObservableList<Tour> tourItems = FXCollections.observableArrayList();

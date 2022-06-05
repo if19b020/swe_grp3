@@ -1,7 +1,7 @@
 package PresentationLayer;
 
-import businesslayer.TourplannerManager;
-import businesslayer.TourplannerManagerFactory;
+import businesslayer.TourPlannerManager;
+import businesslayer.TourPlannerManagerFactory;
 import businesslayer.Tour;
 import businesslayer.TourLog;
 import javafx.beans.property.SimpleStringProperty;
@@ -17,7 +17,7 @@ import static javafx.application.Application.launch;
 
 public class TourLogModel  {
 
-    private final TourplannerManager manager = TourplannerManagerFactory.getManager();
+    private final TourPlannerManager manager = TourPlannerManagerFactory.getManager();
     private Integer id = null;
     @Setter
     private Tour tour = null;
