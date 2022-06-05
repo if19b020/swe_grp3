@@ -1,6 +1,6 @@
 package DataSourceLayer.dao;
-import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
+import businesslayer.Tour;
+import businesslayer.TourLog;
 import java.sql.SQLException;
 import java.util.List;
 

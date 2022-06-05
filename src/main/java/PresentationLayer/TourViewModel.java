@@ -1,7 +1,7 @@
 package PresentationLayer;
 import businesslayer.TourplannerManager;
 import businesslayer.TourplannerManagerFactory;
-import com.example.tourplanner.Tour;
+import businesslayer.Tour;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import lombok.Getter;

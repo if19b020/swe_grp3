@@ -1,18 +1,12 @@
 package PresentationLayer.controller;
 
-import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
+import businesslayer.Tour;
 import javafx.beans.binding.Bindings;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import PresentationLayer.MainViewModel;
 import PresentationLayer.TourViewModel;
 import org.json.JSONException;
 

@@ -1,4 +1,4 @@
-package com.example.tourplanner;
+package businesslayer;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

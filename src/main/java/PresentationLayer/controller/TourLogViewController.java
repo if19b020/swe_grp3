@@ -1,10 +1,9 @@
 package PresentationLayer.controller;
 
 import PresentationLayer.TourLogModel;
-import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
+import businesslayer.Tour;
+import businesslayer.TourLog;
 import javafx.beans.binding.Bindings;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;

@@ -3,8 +3,6 @@ package businesslayer;
 import DataSourceLayer.DataFactory;
 import DataSourceLayer.dao.ITourDao;
 import DataSourceLayer.dao.ITourLogDao;
-import com.example.tourplanner.TourLog;
-import com.example.tourplanner.Tour;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONException;

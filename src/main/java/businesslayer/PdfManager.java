@@ -1,7 +1,5 @@
 package businesslayer;
 
-import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 import javafx.collections.ObservableList;

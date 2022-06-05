@@ -2,8 +2,8 @@ package DataSourceLayer;
 
 // https://devtut.github.io/postgresql/connect-to-postgresql-from-java.html#connecting-with-java-sql-drivermanager-and-properties
 import businesslayer.Configurationmanager;
-import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
+import businesslayer.Tour;
+import businesslayer.TourLog;
 import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.ArrayList;

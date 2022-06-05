@@ -1,15 +1,13 @@
 package PresentationLayer.controller;
 
 import PresentationLayer.MainViewModel;
-import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
+import businesslayer.Tour;
+import businesslayer.TourLog;
 import javafx.beans.binding.Bindings;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
 import lombok.SneakyThrows;
 
 import java.io.IOException;

@@ -1,7 +1,5 @@
 package businesslayer;
 
-import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
 import javafx.collections.ObservableList;
 import org.json.JSONException;
 

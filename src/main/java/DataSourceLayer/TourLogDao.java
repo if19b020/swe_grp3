@@ -1,8 +1,8 @@
 package DataSourceLayer;
 
 import DataSourceLayer.dao.ITourLogDao;
-import com.example.tourplanner.Tour;
-import com.example.tourplanner.TourLog;
+import businesslayer.Tour;
+import businesslayer.TourLog;
 
 import java.io.FileNotFoundException;
 import java.sql.SQLException;

@@ -14,10 +14,12 @@ module com.example.tourplanner {
     requires java.desktop;
     requires java.net.http;
 
-    opens com.example.tourplanner to javafx.fxml;
-    exports com.example.tourplanner;
+    //opens com.example.tourplanner to javafx.fxml;
+    //exports com.example.tourplanner;
     //exports ViewController;
     //exports TourController;
     exports PresentationLayer;
     exports PresentationLayer.controller;
+    exports businesslayer;
+    opens businesslayer to javafx.fxml;
 }
