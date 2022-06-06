@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class Configurationmanager {
+public class ConfigurationManager {
     public static String GetConfigProperty(String propertyName) throws FileNotFoundException {
         Properties prop = new Properties();
         String propFileName = "config.properties";
