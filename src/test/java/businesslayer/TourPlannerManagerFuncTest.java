@@ -11,7 +11,7 @@ class TourPlannerManagerFuncTest {
 
     private TourPlannerManagerFunc manager;
     @Test
-    public void testIfDeleteTourImageDoesDeleteImage() throws IOException, InterruptedException {
+    public void testIfFileexist() throws IOException, InterruptedException {
 
         MapQuest mapQuest = new MapQuest();
         String name = "test";
@@ -19,6 +19,18 @@ class TourPlannerManagerFuncTest {
         mapQuest.startMapQuest(name, "wien", "graz");
         File file = new File (filePath);
         assertTrue(file.exists());
+
+    }
+
+    @Test
+    public void testDeleteTour() throws IOException, InterruptedException {
+
+        MapQuest mapQuest = new MapQuest();
+        String name = "test";
+        String filePath = "Images/" + name + ".jpg";
+        mapQuest.startMapQuest(name, "wien", "graz");
+        File file = new File(filePath);
+
         manager = new TourPlannerManagerFunc();
         manager.DeleteTourImage(filePath);
         assertFalse(file.exists());

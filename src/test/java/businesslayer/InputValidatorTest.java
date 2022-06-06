@@ -10,13 +10,7 @@ class InputValidatorTest {
     public void setUp() {
         inputValidator = new InputValidator();
     }
-    @Test
-    void containsLettersThatAreOptionallyFollowedByNumbers() {
-    }
 
-    @Test
-    void containsOnlyLettersOrIsEmpty() {
-    }
 
     @Test
     void checksIfTimeFormatIsCorrect() {
