@@ -1,3 +1,3 @@
 # swe_grp3
 
-SWE Project Group 3
+TourPlanner project for Software Engineering 2.
