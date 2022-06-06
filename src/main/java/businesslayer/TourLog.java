@@ -4,12 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
-
 @AllArgsConstructor
 @Getter
 @Setter
-// maybe put in package "contracts" so class can be shared between different layers
 public class TourLog {
     public TourLog(String date, String report, String distance, String time, String rating, String weather, String speed) {
         this(null, date, report, distance, time, rating, weather, speed);
