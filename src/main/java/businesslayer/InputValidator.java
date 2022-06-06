@@ -12,7 +12,10 @@ public class InputValidator {
     public boolean containsNumbersWithDecimalPlacesOrIsEmpty(String value){
         return value.matches("([0-9]+([.,][0-9]+)?)?");
     }*/
-
+    public boolean containsOnlyNumbersOrIsEmpty(String value)
+    {
+        return value.matches("[1-5]");
+    }
     public boolean containsOnlyLettersOrIsEmpty(String value){
         return value.matches("[a-zA-Z]*");
     }

@@ -86,8 +86,9 @@ public class TourPlannerManagerFunc implements TourPlannerManager {
     @Override
     public void CreateTourLog(TourLog log, Tour item) throws SQLException {
         InputValidator inputValidation = new InputValidator();
+
         if(     !inputValidation.containsOnlyLettersOrIsEmpty(log.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(log.getTime())
-                || !inputValidation.checksIfDateFormatIsCorrect(log.getDate())){
+                || !inputValidation.checksIfDateFormatIsCorrect(log.getDate()) || !inputValidation.containsOnlyNumbersOrIsEmpty(log.getRating())){
             logger.info("Log couldn't be created because the inputs contained wrong characters.");
             return;
         }
@@ -106,7 +107,7 @@ public class TourPlannerManagerFunc implements TourPlannerManager {
     public void UpdateLogItem(TourLog genLog, Integer id) throws SQLException {
         InputValidator inputValidation = new InputValidator();
         if(     !inputValidation.containsOnlyLettersOrIsEmpty(genLog.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(genLog.getTime())
-                || !inputValidation.checksIfDateFormatIsCorrect(genLog.getDate())){
+                || !inputValidation.checksIfDateFormatIsCorrect(genLog.getDate()) || !inputValidation.containsOnlyNumbersOrIsEmpty(genLog.getRating())){
             logger.info("Log couldn't be changed because the inputs contained wrong characters.");
             return;
         }
@@ -144,4 +145,5 @@ public class TourPlannerManagerFunc implements TourPlannerManager {
     public Tour GetItem(Integer id) throws SQLException {
         return DataFactory.CreateTourItemDAO().FindById(id);
     }
+
 }
