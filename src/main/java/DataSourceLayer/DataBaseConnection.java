@@ -1,6 +1,5 @@
 package DataSourceLayer;
 
-// https://devtut.github.io/postgresql/connect-to-postgresql-from-java.html#connecting-with-java-sql-drivermanager-and-properties
 import businesslayer.ConfigurationManager;
 import businesslayer.Tour;
 import businesslayer.TourLog;
@@ -11,7 +10,6 @@ import java.util.List;
 
 
 public class DataBaseConnection implements IDataBaseConnection {
-
 
     private final String connectionString;
 
@@ -36,12 +34,11 @@ public class DataBaseConnection implements IDataBaseConnection {
         try (Connection connection = CreateConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sqlQuery, Statement.RETURN_GENERATED_KEYS)) {
 
-            // dynamically add parameter
             for (int i = 0; i < parameters.size(); i++) {
                 preparedStatement.setString(i + 1, parameters.get(i).toString());
             }
             int affectedRows = preparedStatement.executeUpdate();
-            //System.out.println(affectedRows);
+
             if (affectedRows > 0) {
                 try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
                     if (generatedKeys.next()) {
@@ -131,7 +128,6 @@ public class DataBaseConnection implements IDataBaseConnection {
         try (Connection connection = CreateConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql_update_by_id)) {
 
-            // dynamically add parameter
             for (int i = 0; i < parameters.size(); i++) {
                 preparedStatement.setString(i + 1, parameters.get(i).toString());
             }
