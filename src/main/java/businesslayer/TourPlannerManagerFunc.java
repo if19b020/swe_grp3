@@ -88,7 +88,8 @@ public class TourPlannerManagerFunc implements TourPlannerManager {
         InputValidator inputValidation = new InputValidator();
 
         if(     !inputValidation.containsOnlyLettersOrIsEmpty(log.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(log.getTime())
-                || !inputValidation.checksIfDateFormatIsCorrect(log.getDate()) || !inputValidation.containsOnlyNumbersOrIsEmpty(log.getRating())){
+                || !inputValidation.checksIfDateFormatIsCorrect(log.getDate()) || !inputValidation.containsOnlyNumbersforRating(log.getRating())
+                || !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(log.getSpeed())){
             logger.info("Log couldn't be created because the inputs contained wrong characters.");
             return;
         }
@@ -107,7 +108,8 @@ public class TourPlannerManagerFunc implements TourPlannerManager {
     public void UpdateLogItem(TourLog genLog, Integer id) throws SQLException {
         InputValidator inputValidation = new InputValidator();
         if(     !inputValidation.containsOnlyLettersOrIsEmpty(genLog.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(genLog.getTime())
-                || !inputValidation.checksIfDateFormatIsCorrect(genLog.getDate()) || !inputValidation.containsOnlyNumbersOrIsEmpty(genLog.getRating())){
+                || !inputValidation.checksIfDateFormatIsCorrect(genLog.getDate()) || !inputValidation.containsOnlyNumbersforRating(genLog.getRating())
+                || !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(genLog.getSpeed())){
             logger.info("Log couldn't be changed because the inputs contained wrong characters.");
             return;
         }

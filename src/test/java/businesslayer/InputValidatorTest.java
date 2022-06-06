@@ -93,18 +93,41 @@ class InputValidatorTest {
     @Test
     public void testIfValidationContainsNumbersWithDecimalPlacesOrIsEmptyContainsSpace() {
         String number = " ";
-        assertFalse(inputValidator.containsOnlyNumbersOrIsEmpty(number));
+        assertFalse(inputValidator.containsOnlyNumbersforRating(number));
     }
 
     @Test
     public void testIfValidationContainsNumbersWithDecimalPlacesOrIsEmptyContainsLetters() {
         String number = "abcd";
-        assertFalse(inputValidator.containsOnlyNumbersOrIsEmpty(number));
+        assertFalse(inputValidator.containsOnlyNumbersforRating(number));
     }
 
     @Test
     public void testIfValidationContainsNumbersWithDecimalPlacesOrIsEmptyContainsNumberBeforeDecimalPoint() {
         String number = ",032";
-        assertFalse(inputValidator.containsOnlyNumbersOrIsEmpty(number));
+        assertFalse(inputValidator.containsOnlyNumbersforRating(number));
+    }
+    @Test
+    public void testIfValidationContainsOnlyNumbersOrIsEmpty() {
+        String number = "4";
+
+        assertTrue(inputValidator.containsOnlyNumbersforRating(number));
+    }
+    @Test
+    public void testIfValidationContainsNumbersWithDecimalPlacesOrIsEmpty() {
+        String number = "";
+        assertTrue(inputValidator.containsNumbersWithDecimalPlacesOrIsEmpty(number));
+        number = "0123213";
+        assertTrue(inputValidator.containsNumbersWithDecimalPlacesOrIsEmpty(number));
+        number = "423432,0234";
+        assertTrue(inputValidator.containsNumbersWithDecimalPlacesOrIsEmpty(number));
+    }
+
+    @Test
+    public void testIfValidationContainsOnlyNumbersOrIsEmptyContainsWrongInput() {
+        String number = "notnumbers";
+        assertFalse(inputValidator.containsOnlyNumbersforRating(number));
+        number = "1andnotnumbers";
+        assertFalse(inputValidator.containsOnlyNumbersforRating(number));
     }
 }

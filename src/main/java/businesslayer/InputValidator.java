@@ -8,11 +8,11 @@ public class InputValidator {
     /*public boolean containsOnlyNumbersOrIsEmpty(String value){
         return value.matches("[0-9]*");
     }
-
+*/
     public boolean containsNumbersWithDecimalPlacesOrIsEmpty(String value){
         return value.matches("([0-9]+([.,][0-9]+)?)?");
-    }*/
-    public boolean containsOnlyNumbersOrIsEmpty(String value)
+    }
+    public boolean containsOnlyNumbersforRating(String value)
     {
         return value.matches("[1-5]");
     }

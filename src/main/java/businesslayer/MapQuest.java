@@ -1,5 +1,7 @@
 package businesslayer;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -12,7 +14,8 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-
+@Getter
+@Setter
 public class MapQuest {
     public String startMapQuest(String name, String from, String to) throws IOException, JSONException, InterruptedException {
         String key = Configurationmanager.GetConfigProperty("MapQuestKey");
