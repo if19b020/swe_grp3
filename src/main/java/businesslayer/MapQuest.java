@@ -18,7 +18,7 @@ import java.net.http.HttpResponse;
 @Setter
 public class MapQuest {
     public String startMapQuest(String name, String from, String to) throws IOException, JSONException, InterruptedException {
-        String key = Configurationmanager.GetConfigProperty("MapQuestKey");
+        String key = ConfigurationManager.GetConfigProperty("MapQuestKey");
 
         String uri = "http://www.mapquestapi.com/directions/v2/route?key="+key+"&from="+from+"&to="+to;
         uri = uri.replace(" ","%20");

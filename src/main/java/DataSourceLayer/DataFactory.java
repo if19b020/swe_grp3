@@ -2,7 +2,7 @@ package DataSourceLayer;
 
 import DataSourceLayer.dao.ITourDao;
 import DataSourceLayer.dao.ITourLogDao;
-import businesslayer.Configurationmanager;
+import businesslayer.ConfigurationManager;
 import java.io.FileNotFoundException;
 
 
@@ -18,7 +18,7 @@ public class DataFactory {
     }
 
     private static IDataBaseConnection CreateDatabase() throws FileNotFoundException {
-        String connectionString = Configurationmanager.GetConfigProperty("PostgresSQLConnectionString");
+        String connectionString = ConfigurationManager.GetConfigProperty("PostgresSQLConnectionString");
         return CreateDatabase(connectionString);
     }
 

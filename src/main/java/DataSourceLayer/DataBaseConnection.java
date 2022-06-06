@@ -1,7 +1,7 @@
 package DataSourceLayer;
 
 // https://devtut.github.io/postgresql/connect-to-postgresql-from-java.html#connecting-with-java-sql-drivermanager-and-properties
-import businesslayer.Configurationmanager;
+import businesslayer.ConfigurationManager;
 import businesslayer.Tour;
 import businesslayer.TourLog;
 import java.io.FileNotFoundException;
@@ -21,8 +21,8 @@ public class DataBaseConnection implements IDataBaseConnection {
     }
 
     private Connection CreateConnection() throws SQLException, FileNotFoundException {
-        String user = Configurationmanager.GetConfigProperty("Username");
-        String password = Configurationmanager.GetConfigProperty("Password");
+        String user = ConfigurationManager.GetConfigProperty("Username");
+        String password = ConfigurationManager.GetConfigProperty("Password");
         try {
             return DriverManager.getConnection(connectionString, user, password);
         } catch (SQLException e) {
