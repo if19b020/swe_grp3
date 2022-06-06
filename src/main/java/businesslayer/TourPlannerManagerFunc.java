@@ -90,12 +90,12 @@ public class TourPlannerManagerFunc implements TourPlannerManager {
         if(     !inputValidation.containsOnlyLettersOrIsEmpty(log.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(log.getTime())
                 || !inputValidation.checksIfDateFormatIsCorrect(log.getDate()) || !inputValidation.containsOnlyNumbersforRating(log.getRating())
                 || !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(log.getSpeed())){
-            logger.info("Log couldn't be created because the inputs contained wrong characters.");
+            logger.info("Wrong input format. Log for Tour " + item.getName() + " couldn't be created.");
             return;
         }
         ITourLogDao tourLogDAO = DataFactory.CreateTourLogDAO();
         tourLogDAO.AddNewItemLog(log, item);
-        logger.info("Log was successfully created.");
+        logger.info("Log for Tour " + item.getName() + " was successfully created.");
     }
 
     @Override
@@ -110,7 +110,7 @@ public class TourPlannerManagerFunc implements TourPlannerManager {
         if(     !inputValidation.containsOnlyLettersOrIsEmpty(genLog.getWeather()) || !inputValidation.checksIfTimeFormatIsCorrect(genLog.getTime())
                 || !inputValidation.checksIfDateFormatIsCorrect(genLog.getDate()) || !inputValidation.containsOnlyNumbersforRating(genLog.getRating())
                 || !inputValidation.containsNumbersWithDecimalPlacesOrIsEmpty(genLog.getSpeed())){
-            logger.info("Log couldn't be changed because the inputs contained wrong characters.");
+            logger.info("Wrong input format. Log couldn't be changed because the inputs contained wrong characters.");
             return;
         }
         ITourLogDao tourLogDAO = DataFactory.CreateTourLogDAO();
