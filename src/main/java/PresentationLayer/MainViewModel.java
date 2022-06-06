@@ -37,7 +37,6 @@ public class MainViewModel {
     @Getter private final StringProperty search = new SimpleStringProperty("");
     @Getter private final StringProperty title = new SimpleStringProperty("");
     @Getter private final StringProperty description = new SimpleStringProperty("");
-    @Getter private final StringProperty adjacentTour = new SimpleStringProperty("");
     @Getter private final ObjectProperty<Image> route = new SimpleObjectProperty<>();
 
     @Getter private final ChangeListener<Tour> changeListener = (observableValue, oldValue, newValue) -> {
